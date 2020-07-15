@@ -3,3 +3,44 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+@media screen and (min-width: 300px) {
+  
+  .avatar-img {
+    height: 190px !important;
+  }
+
+  .banner-text h1{
+      font-size: 56px !important;
+  }
+
+  .mdl-tabs {
+    margin-top: 40px !important;
+  }
+
+  .contact-image{
+    height: 150px !important;
+  }
+
+  .contact-list i {
+    font-size: 30px !important;
+    padding-right: 7px !important;
+  }
+
+  .mdl-list__item-primary-content{
+    font-size: 23px !important;
+  }
+
+  .avatar-hidden{
+    display: none !important
+  }
+
+  .mt-20-mobile{
+    margin-top: 38px !important;
+  }
+
+  .social-links{
+    width: 230px !important;
+  }
+
+}

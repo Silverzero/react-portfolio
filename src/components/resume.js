@@ -3,90 +3,135 @@ import { Grid, Cell } from 'react-mdl';
 import Education from './education';
 import Experience from './experience';
 import Skills from './skills';
-
+import me from '../images/me.jpeg'
 
 class Resume extends Component {
   render() {
     return(
       <div>
         <Grid>
-          <Cell col={4}>
+          <Cell col={3}>
             <div style={{textAlign: 'center'}}>
               <img
-                src="https://www.shareicon.net/download/2015/09/18/103157_man_512x512.png"
+                src={me}
+                className="avatar-hidden"
                 alt="avatar"
-                style={{height: '200px'}}
-                 />
+                style={{height: '200px', borderRadius:'20px'}}
+              />
             </div>
 
-            <h2 style={{paddingTop: '2em'}}>Paul Hanna</h2>
-            <h4 style={{color: 'grey'}}>Programmer</h4>
-            <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <h4 className="mt-20-mobile" style={{color: 'grey'}}>Backend Developer</h4>
             <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
             <h5>Address</h5>
-            <p>1 Hacker Way Menlo Park, 94025</p>
+            <p>Madrid</p>
             <h5>Phone</h5>
-            <p>(123) 456-7890</p>
+            <p>(+34) 690 69 65 61</p>
             <h5>Email</h5>
-            <p>someone@example.com</p>
+            <p>silver301193@gmail.com</p>
             <h5>Web</h5>
-            <p>mywebsite.com</p>
+            <p><a target="_blank" href="http://marcodesantes.com" >marcodesantes.com</a></p>
+            <p><a target="_blank" href="http://porfolio.marcodesantes.com" >portfolio.marcodesantes.com</a></p>
+            <p><a target="_blank" href="http://scrumtools.marcodesantes.com" >scrumtools.marcodesantes.com</a></p>
             <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
           </Cell>
-          <Cell className="resume-right-col" col={8}>
+          
+          <Cell className="resume-right-col" col={9}>
             <h2>Education</h2>
 
+            <Education
+              startYear={2014}
+              endYear={2019}
+              schoolName="Universidad Complutense de Madrid"
+            />
 
             <Education
-              startYear={2002}
-              endYear={2006}
-              schoolName="My University"
-              schoolDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-               />
+              startYear={2018}
+              endYear={2018}
+              schoolName="Google - DOUBLECLICK FOR PUBLISHERS"
+              schoolDescription="License Number: 5769485438943232"
+            />
 
-               <Education
-                 startYear={2007}
-                 endYear={2009}
-                 schoolName="My 2nd University"
-                 schoolDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-                  />
-                <hr style={{borderTop: '3px solid #e22947'}} />
+            <Education
+              startYear={2019}
+              endYear={2019}
+              schoolName="Udemy - DOMINANDO LARAVEL"
+              schoolDescription="License Number: UC-5VC15VOJ"
+            />
 
-              <h2>Experience</h2>
+            <Education
+              startYear={2019}
+              endYear={2019}
+              schoolName="Udemy - APRENDIENDO REACT JS"
+              schoolDescription="License Number: UC-7LW49VKZ"
+            />
+
+            <Education
+              startYear={2020}
+              endYear={2020}
+              schoolName="Udemy - MICROSERVICIOS CON SPRING BOOT Y SPRING CLOUD NETFLIX EUREKA"
+              schoolDescription="License Number: UC-31f300d3-0c6f-4236-82d8-b10ae26c6500"
+            />
+
+            <Education
+              startYear={2020}
+              endYear={2020}
+              schoolName="Udemy - JENKINS CURSO INTENSIVO PARA DEVOPS Y DESARROLLADORES"
+              schoolDescription="License Number: UC-bd9af511-3d5a-4e36-9ee8-3c9111d4b02e"
+            />
+
+            <Education
+              startYear={2020}
+              endYear={2020}
+              schoolName="Udemy - DOCKER DE CERO A EXPERTO"
+              schoolDescription="License Number: UC-a3ea6c4c-e121-4ed3-8c2b-7d1e363e2698"
+            />
+
+            <hr style={{borderTop: '3px solid #e22947'}} />
+
+            <h2>Experience</h2>
 
             <Experience
-              startYear={2009}
-              endYear={2012}
-              jobName="First Job"
-              jobDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-              />
+              startYear={2017}
+              endYear={2019}
+              jobName="FullStack Developer"
+              jobDescription="Global Incubator - Madrid"
+            />
 
-              <Experience
-                startYear={2012}
-                endYear={2016}
-                jobName="Second Job"
-                jobDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-                />
-              <hr style={{borderTop: '3px solid #e22947'}} />
-              <h2>Skills</h2>
-              <Skills
-                skill="javascript"
-                progress={100}
-                />
-                <Skills
-                  skill="HTML/CSS"
-                  progress={80}
-                  />
-                  <Skills
-                    skill="NodeJS"
-                    progress={50}
-                    />
-                    <Skills
-                      skill="React"
-                      progress={25}
-                      />
+            <Experience
+              startYear={2020}
+              endYear={"now"}
+              jobName="Senior Backend Developer"
+              jobDescription="Global Incubator - Madrid"
+            />
+              
+            <hr style={{borderTop: '3px solid #e22947'}} />
+            
+            <h2>Skills</h2>
+            
+            <Skills
+              skill="PHP"
+              progress={100}
+            />
 
+            <Skills
+              skill="Laravel / Lumen"
+              progress={90}
+            />
+            
+            <Skills
+              skill="Spring Boot"
+              progress={80}
+            />
+            
+            <Skills
+              skill="Flask Python"
+              progress={70}
+            />
+          
+            <Skills
+              skill="ReactJS"
+              progress={50}
+            />
 
           </Cell>
         </Grid>

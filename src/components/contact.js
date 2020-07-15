@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
-
+import me from '../images/me.jpeg'
 
 class Contact extends Component {
   render() {
@@ -8,49 +8,36 @@ class Contact extends Component {
       <div className="contact-body">
         <Grid className="contact-grid">
           <Cell col={6}>
-            <h2>Paul Hanna</h2>
+            <h2>Marco Desantes</h2>
             <img
-              src="https://cdn2.iconfinder.com/data/icons/avatar-2/512/Fred_man-512.png"
+              src={me}
+              className="contact-image"
               alt="avatar"
-              style={{height: '250px'}}
-               />
-             <p style={{ width: '75%', margin: 'auto', paddingTop: '1em'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+              style={{height: '250px', borderRadius:'20px'}}
+            />
+            <p style={{ width: '75%', margin: 'auto', paddingTop: '1em'}}>
+              Hi! I'm Marco, i am 26 years old and im currently working like Senior Backend Developer in Madrid (Spain) specialized in PHP with knowledge in Laravel / Lumen, Spring Boot Java, Flask Python, and a little bit of ReactJS (16.8 "Hooks")
+            </p>
 
           </Cell>
           <Cell col={6}>
             <h2>Contact Me</h2>
-            <hr/>
 
             <div className="contact-list">
               <List>
                 <ListItem>
                   <ListItemContent style={{fontSize: '30px', fontFamily: 'Anton'}}>
                     <i className="fa fa-phone-square" aria-hidden="true"/>
-                    (123) 456-7890
-                  </ListItemContent>
-                </ListItem>
-
-                <ListItem>
-                  <ListItemContent style={{fontSize: '30px', fontFamily: 'Anton'}}>
-                    <i className="fa fa-fax" aria-hidden="true"/>
-                    (123) 456-7890
+                    (+34) 690 69 65 61
                   </ListItemContent>
                 </ListItem>
 
                 <ListItem>
                   <ListItemContent style={{fontSize: '30px', fontFamily: 'Anton'}}>
                     <i className="fa fa-envelope" aria-hidden="true"/>
-                    someone@example.com
+                    silver301193@gmail.com
                   </ListItemContent>
                 </ListItem>
-
-                <ListItem>
-                  <ListItemContent style={{fontSize: '30px', fontFamily: 'Anton'}}>
-                    <i className="fa fa-skype" aria-hidden="true"/>
-                    MySkypeID
-                  </ListItemContent>
-                </ListItem>
-
 
               </List>
             </div>
